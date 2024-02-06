@@ -3,5 +3,6 @@
     height: 100%;
     object-fit: cover;
     position: absolute;
-    filter: drop-shadow(0 10px 10px rgba(65, 65, 65, 0.568)) brightness(0.15);
+    fill: #202020;
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.726)) ;
 }
