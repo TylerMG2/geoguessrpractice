@@ -1,0 +1,7 @@
+.WorldMapImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    filter: drop-shadow(0 10px 10px rgba(65, 65, 65, 0.568)) brightness(0.15);
+}
