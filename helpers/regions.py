@@ -29,5 +29,5 @@ for country in countries_data:
         country['continent'] = None
 
 # Save the updated countries_data to a new file
-with open('updated_countries.json', 'w') as updated_file:
+with open('countries_with_regions.json', 'w') as updated_file:
     json.dump(countries_data, updated_file, indent=4)

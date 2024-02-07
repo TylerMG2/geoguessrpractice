@@ -17,19 +17,17 @@ export enum Region {
     CentralAsia = "Central Asia",
     EasternAsia = "Eastern Asia",
     SouthernAsia = "Southern Asia",
-    SoutheasternAsia = "Southeastern Asia",
+    SouthEasternAsia = "South-Eastern Asia",
     WesternEurope = "Western Europe",
     EasternEurope = "Eastern Europe",
     NorthernEurope = "Northern Europe",
     SouthernEurope = "Southern Europe",
-    Australia = "Australia",
+    AustraliaAndNewZealand = "Australia and New Zealand",
     Melanesia = "Melanesia",
     Micronesia = "Micronesia",
     Polynesia = "Polynesia",
     NorthernAmerica = "Northern America",
-    CentralAmerica = "Central America",
-    Caribbean = "Caribbean",
-    SouthAmerica = "South America"
+    LatinAmericaandtheCaribbean = "Latin America and the Caribbean"
 };
 
 export enum Drives {
@@ -47,6 +45,7 @@ export interface Country {
     id: string;
     continent: Continent;
     region: Region
+    bbox: string;
 };
 
 export const countries: Country[] = countriesJson.map(country => ({
