@@ -1,6 +1,8 @@
 import { createSignal, type Component } from 'solid-js';7
 import styles from './WorldMap.module.css';
 import { Country, countries, Continent, Region, Drives } from './Countries';
+import { tweenToNewViewBox } from '../../utils/tweenToNewViewBox';
+import { IconList, IconMap } from '@tabler/icons-solidjs';
 
 // Filters Interface
 interface Filters {
@@ -10,10 +12,19 @@ interface Filters {
   region?: Region;
 }
 
+// Toggle enum
+enum Toggle {
+  Map = 'map',
+  List = 'list',
+}
+
 const WorldMap: Component = () => {
 
   // State to keep track of the hovered country
   const [hoveredCountry, setHoveredCountry] = createSignal<string | null>(null);
+
+  // Current map mode
+  const [mapMode, setMapMode] = createSignal<Toggle>(Toggle.Map);
 
   var previous_fill = '';
 
@@ -22,8 +33,9 @@ const WorldMap: Component = () => {
 
   // State to keep track of the filters
   const [filters, setFilters] = createSignal<Filters>({
-    min_coverage: 1,
-    region: Region.NorthernAmerica
+    min_coverage: 0,
+    continent: Continent.Europe,
+    region: Region.WesternEurope,
   });
 
   // Event handlers
@@ -42,12 +54,22 @@ const WorldMap: Component = () => {
     setHoveredCountry(null);
   };
 
+  // Handle toggle
+  const handleToggle = () => {
+    if (mapMode() === Toggle.Map) {
+      setMapMode(Toggle.List);
+    } else {
+      setMapMode(Toggle.Map);
+    }
+  }
+
+  // Handle mouse click on a country
   const handleMouseClick = (e: MouseEvent) => {
     const target = e.target as SVGElement;
-    const bbox = target.getAttribute('data-bbox');
-    console.log(bbox);
-    if (bbox) {
-      setViewBox(bbox);
+    const targetViewBox = target.getAttribute('data-bbox');
+    if (targetViewBox) {
+      const currentViewBox = viewBox();
+      tweenToNewViewBox(setViewBox, currentViewBox, targetViewBox);
     }
   }
 
@@ -75,6 +97,12 @@ const WorldMap: Component = () => {
 
   // Render the component
   return (
+    <>
+    <button class={styles.ViewToggle} onClick={handleToggle}>
+      <div class={styles.Slider + (mapMode() === Toggle.List ? ' ' + styles.SliderRight : '')}></div>
+      <IconMap/>
+      <IconList/>
+    </button>
     <div class={styles.WorldMap}>
       <svg 
         class={styles.WorldMapImage} 
@@ -102,15 +130,10 @@ const WorldMap: Component = () => {
           >
           </path>
         ))}
-        <circle cx="997.9" cy="189.1" id="0">
-        </circle>
-        <circle cx="673.5" cy="724.1" id="1">
-        </circle>
-        <circle cx="1798.2" cy="719.3" id="2">
-        </circle>
-        <rect id="nordic" x="1000" y="50" width="200" height="100" fill="rgba(255,255,255,0)"/>
+        {/* <rect id="nordic" x="1000" y="50" width="200" height="100" fill="rgba(255,255,255,0)"/> */}
       </svg>
     </div>
+    </>
   );
 };
 
