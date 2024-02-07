@@ -1,7 +1,7 @@
 import countriesJson from './countries.json'
 
 // Enum for continents
-export enum Continent {
+export enum Continents {
     Africa = "Africa",
     Asia = "Asia",
     Europe = "Europe",
@@ -10,7 +10,7 @@ export enum Continent {
 };
 
 // Enum for regions
-export enum Region {
+export enum Regions {
     NorthernAfrica = "Northern Africa",
     SubSaharanAfrica = "Sub-Saharan Africa",
     WesternAsia = "Western Asia",

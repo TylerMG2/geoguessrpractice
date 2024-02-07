@@ -34,8 +34,8 @@ const WorldMap: Component = () => {
   // State to keep track of the filters
   const [filters, setFilters] = createSignal<Filters>({
     min_coverage: 0,
-    continent: Continent.Europe,
-    region: Region.WesternEurope,
+    continent: Continent.Africa,
+    region: Region.NorthernAfrica
   });
 
   // Event handlers
