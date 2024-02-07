@@ -1,18 +1,13 @@
 import { createSignal, type Component } from 'solid-js';7
 import styles from './WorldMap.module.css';
-import { Country, countries } from './Countries';
-
-// Driving side enum
-enum DrivingSide {
-  Left,
-  Right,
-  Both
-}
+import { Country, countries, Continent, Region, Drives } from './Countries';
 
 // Filters Interface
 interface Filters {
-  drives_left: DrivingSide;
   min_coverage: number;
+  drives?: Drives;
+  continent?: Continent;
+  region?: Region;
 }
 
 const WorldMap: Component = () => {
@@ -24,8 +19,8 @@ const WorldMap: Component = () => {
 
   // State to keep track of the filters
   const [filters, setFilters] = createSignal<Filters>({
-    drives_left: DrivingSide.Both,
-    min_coverage: 2
+    min_coverage: 0,
+    region: Region.NorthernAfrica,
   });
 
   // Event handlers
@@ -33,7 +28,7 @@ const WorldMap: Component = () => {
     const target = e.target as SVGElement;
     const country = target.getAttribute('data-name');
     previous_fill = target.style.fill;
-    target.style.fill = 'var(--primary)';
+    target.style.fill = 'rgba(50, 50, 50, 1)';
     setHoveredCountry(country);
   };
 
@@ -51,11 +46,17 @@ const WorldMap: Component = () => {
       return false;
     }
 
-    if (filters().drives_left === DrivingSide.Left && country.drives_left === false) {
+    if (filters().drives && country.drives !== filters().drives) {
       return false;
     }
 
-    if (filters().drives_left === DrivingSide.Right && country.drives_left === true) {
+    console.log(filters().continent && country.continent !== filters().continent)
+    if (filters().continent && country.continent !== filters().continent) {
+      return false;
+    }
+
+    console.log(filters().region, country.region);
+    if (filters().region && country.region !== filters().region) {
       return false;
     }
 
