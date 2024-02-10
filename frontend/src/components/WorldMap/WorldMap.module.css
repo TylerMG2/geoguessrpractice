@@ -5,7 +5,7 @@
     position: absolute;
     top: 0;
     fill: #202020;
-    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.726)) ;
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.644)) ;
 }
 
 .ViewToggle {
@@ -42,4 +42,13 @@
 .SliderRight {
     transform: translate(100%, 0);
     border-radius: 0 40px 40px 0;
+}
+
+.Highlighted {
+    transition: 0.2s;
+    fill-opacity: 1 !important;
+}
+
+.Selected {
+    fill-opacity: 0.7 !important; 
 }

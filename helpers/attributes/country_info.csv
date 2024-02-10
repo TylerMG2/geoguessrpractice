@@ -1,4 +1,4 @@
-flag_emoji,iso_alpha2,country_name
+flag_emoji,iso_alpha2,name
 🇦🇩,AD,Andorra
 🇦🇪,AE,United Arab Emirates
 🇦🇫,AF,Afghanistan
@@ -7,7 +7,6 @@ flag_emoji,iso_alpha2,country_name
 🇦🇱,AL,Albania
 🇦🇲,AM,Armenia
 🇦🇴,AO,Angola
-🇦🇶,AQ,Antarctica
 🇦🇷,AR,Argentina
 🇦🇸,AS,American Samoa
 🇦🇹,AT,Austria
@@ -212,7 +211,6 @@ flag_emoji,iso_alpha2,country_name
 🇸🇽,SX,Sint Maarten
 🇸🇾,SY,Syria
 🇸🇿,SZ,Eswatini
-🇹🇦,TA,Tristan da Cunha
 🇹🇨,TC,Turks & Caicos Islands
 🇹🇩,TD,Chad
 🇹🇫,TF,French Southern Territories

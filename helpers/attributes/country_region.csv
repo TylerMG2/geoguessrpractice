@@ -6,31 +6,30 @@ DZ,DZA,Africa,Northern Africa
 AS,ASM,Oceania,Polynesia
 AD,AND,Europe,Southern Europe
 AO,AGO,Africa,Middle Africa
-AI,AIA,Americas,Caribbean
-AQ,ATA,Antarctica,
-AG,ATG,Americas,Caribbean
-AR,ARG,Americas,South America
+AI,AIA,North America,Caribbean
+AG,ATG,North America,Caribbean
+AR,ARG,South America,South America
 AM,ARM,Asia,Western Asia
-AW,ABW,Americas,Caribbean
+AW,ABW,North America,Caribbean
 AU,AUS,Oceania,Australia and New Zealand
 AT,AUT,Europe,Western Europe
 AZ,AZE,Asia,Western Asia
-BS,BHS,Americas,Caribbean
+BS,BHS,North America,Caribbean
 BH,BHR,Asia,Western Asia
 BD,BGD,Asia,Southern Asia
-BB,BRB,Americas,Caribbean
+BB,BRB,North America,Caribbean
 BY,BLR,Europe,Eastern Europe
 BE,BEL,Europe,Western Europe
-BZ,BLZ,Americas,Central America
+BZ,BLZ,North America,Central America
 BJ,BEN,Africa,Western Africa
-BM,BMU,Americas,Northern America
+BM,BMU,North America,Northern America
 BT,BTN,Asia,Southern Asia
-BO,BOL,Americas,South America
-BQ,BES,Americas,Caribbean
+BO,BOL,South America,South America
+BQ,BES,North America,Caribbean
 BA,BIH,Europe,Southern Europe
 BW,BWA,Africa,Southern Africa
-BV,BVT,Americas,South America
-BR,BRA,Americas,South America
+BV,BVT,South America,South America
+BR,BRA,South America,South America
 IO,IOT,Africa,Eastern Africa
 BN,BRN,Asia,South-eastern Asia
 BG,BGR,Europe,Eastern Europe
@@ -39,46 +38,46 @@ BI,BDI,Africa,Eastern Africa
 CV,CPV,Africa,Western Africa
 KH,KHM,Asia,South-eastern Asia
 CM,CMR,Africa,Middle Africa
-CA,CAN,Americas,Northern America
-KY,CYM,Americas,Caribbean
+CA,CAN,North America,Northern America
+KY,CYM,North America,Caribbean
 CF,CAF,Africa,Middle Africa
 TD,TCD,Africa,Middle Africa
-CL,CHL,Americas,South America
+CL,CHL,South America,South America
 CN,CHN,Asia,Eastern Asia
 CX,CXR,Oceania,Australia and New Zealand
 CC,CCK,Oceania,Australia and New Zealand
-CO,COL,Americas,South America
+CO,COL,South America,South America
 KM,COM,Africa,Eastern Africa
 CG,COG,Africa,Middle Africa
 CD,COD,Africa,Middle Africa
-CK,COK,Oceania,Polynesia
-CR,CRI,Americas,Central America
+CK,COK,Antartica,Antartica
+CR,CRI,North America,Central America
 CI,CIV,Africa,Western Africa
 HR,HRV,Europe,Southern Europe
-CU,CUB,Americas,Caribbean
-CW,CUW,Americas,Caribbean
+CU,CUB,North America,Caribbean
+CW,CUW,North America,Caribbean
 CY,CYP,Asia,Western Asia
 CZ,CZE,Europe,Eastern Europe
 DK,DNK,Europe,Northern Europe
 DJ,DJI,Africa,Eastern Africa
-DM,DMA,Americas,Caribbean
-DO,DOM,Americas,Caribbean
-EC,ECU,Americas,South America
+DM,DMA,North America,Caribbean
+DO,DOM,North America,Caribbean
+EC,ECU,South America,South America
 EG,EGY,Africa,Northern Africa
-SV,SLV,Americas,Central America
+SV,SLV,North America,Central America
 GQ,GNQ,Africa,Middle Africa
 ER,ERI,Africa,Eastern Africa
 EE,EST,Europe,Northern Europe
 SZ,SWZ,Africa,Southern Africa
 ET,ETH,Africa,Eastern Africa
-FK,FLK,Americas,South America
+FK,FLK,South America,South America
 FO,FRO,Europe,Northern Europe
 FJ,FJI,Oceania,Melanesia
 FI,FIN,Europe,Northern Europe
 FR,FRA,Europe,Western Europe
-GF,GUF,Americas,South America
-PF,PYF,Oceania,Polynesia
-TF,ATF,Africa,Eastern Africa
+GF,GUF,South America,South America
+PF,PYF,Antartica,Antartica
+TF,ATF,Antartica,Antartica
 GA,GAB,Africa,Middle Africa
 GM,GMB,Africa,Western Africa
 GE,GEO,Asia,Western Asia
@@ -86,19 +85,19 @@ DE,DEU,Europe,Western Europe
 GH,GHA,Africa,Western Africa
 GI,GIB,Europe,Southern Europe
 GR,GRC,Europe,Southern Europe
-GL,GRL,Americas,Northern America
-GD,GRD,Americas,Caribbean
-GP,GLP,Americas,Caribbean
+GL,GRL,North America,Northern America
+GD,GRD,North America,Caribbean
+GP,GLP,North America,Caribbean
 GU,GUM,Oceania,Micronesia
-GT,GTM,Americas,Central America
+GT,GTM,North America,Central America
 GG,GGY,Europe,Channel Islands
 GN,GIN,Africa,Western Africa
 GW,GNB,Africa,Western Africa
-GY,GUY,Americas,South America
-HT,HTI,Americas,Caribbean
+GY,GUY,South America,South America
+HT,HTI,North America,Caribbean
 HM,HMD,Oceania,Australia and New Zealand
 VA,VAT,Europe,Southern Europe
-HN,HND,Americas,Central America
+HN,HND,North America,Central America
 HK,HKG,Asia,Eastern Asia
 HU,HUN,Europe,Eastern Europe
 IS,ISL,Europe,Northern Europe
@@ -110,13 +109,13 @@ IE,IRL,Europe,Northern Europe
 IM,IMN,Europe,Northern Europe
 IL,ISR,Asia,Western Asia
 IT,ITA,Europe,Southern Europe
-JM,JAM,Americas,Caribbean
+JM,JAM,North America,Caribbean
 JP,JPN,Asia,Eastern Asia
 JE,JEY,Europe,Channel Islands
 JO,JOR,Asia,Western Asia
 KZ,KAZ,Asia,Central Asia
 KE,KEN,Africa,Eastern Africa
-KI,KIR,Oceania,Micronesia
+KI,KIR,Antartica,Antartica
 KP,PRK,Asia,Eastern Asia
 KR,KOR,Asia,Eastern Asia
 KW,KWT,Asia,Western Asia
@@ -138,17 +137,17 @@ MV,MDV,Asia,Southern Asia
 ML,MLI,Africa,Western Africa
 MT,MLT,Europe,Southern Europe
 MH,MHL,Oceania,Micronesia
-MQ,MTQ,Americas,Caribbean
+MQ,MTQ,North America,Caribbean
 MR,MRT,Africa,Western Africa
 MU,MUS,Africa,Eastern Africa
 YT,MYT,Africa,Eastern Africa
-MX,MEX,Americas,Central America
+MX,MEX,North America,Central America
 FM,FSM,Oceania,Micronesia
 MD,MDA,Europe,Eastern Europe
 MC,MCO,Europe,Western Europe
 MN,MNG,Asia,Eastern Asia
 ME,MNE,Europe,Southern Europe
-MS,MSR,Americas,Caribbean
+MS,MSR,North America,Caribbean
 MA,MAR,Africa,Northern Africa
 MZ,MOZ,Africa,Eastern Africa
 MM,MMR,Asia,South-eastern Asia
@@ -158,7 +157,7 @@ NP,NPL,Asia,Southern Asia
 NL,NLD,Europe,Western Europe
 NC,NCL,Oceania,Melanesia
 NZ,NZL,Oceania,Australia and New Zealand
-NI,NIC,Americas,Central America
+NI,NIC,North America,Central America
 NE,NER,Africa,Western Africa
 NG,NGA,Africa,Western Africa
 NU,NIU,Oceania,Polynesia
@@ -170,27 +169,27 @@ OM,OMN,Asia,Western Asia
 PK,PAK,Asia,Southern Asia
 PW,PLW,Oceania,Micronesia
 PS,PSE,Asia,Western Asia
-PA,PAN,Americas,Central America
+PA,PAN,North America,Central America
 PG,PNG,Oceania,Melanesia
-PY,PRY,Americas,South America
-PE,PER,Americas,South America
+PY,PRY,South America,South America
+PE,PER,South America,South America
 PH,PHL,Asia,South-eastern Asia
-PN,PCN,Oceania,Polynesia
+PN,PCN,Antartica,Antartica
 PL,POL,Europe,Eastern Europe
 PT,PRT,Europe,Southern Europe
-PR,PRI,Americas,Caribbean
+PR,PRI,North America,Caribbean
 QA,QAT,Asia,Western Asia
 RE,REU,Africa,Eastern Africa
 RO,ROU,Europe,Eastern Europe
 RU,RUS,Europe,Eastern Europe
 RW,RWA,Africa,Eastern Africa
-BL,BLM,Americas,Caribbean
+BL,BLM,North America,Caribbean
 SH,SHN,Africa,Western Africa
-KN,KNA,Americas,Caribbean
-LC,LCA,Americas,Caribbean
-MF,MAF,Americas,Caribbean
-PM,SPM,Americas,Northern America
-VC,VCT,Americas,Caribbean
+KN,KNA,North America,Caribbean
+LC,LCA,North America,Caribbean
+MF,MAF,North America,Caribbean
+PM,SPM,North America,Northern America
+VC,VCT,North America,Caribbean
 WS,WSM,Oceania,Polynesia
 SM,SMR,Europe,Southern Europe
 ST,STP,Africa,Middle Africa
@@ -200,18 +199,18 @@ RS,SRB,Europe,Southern Europe
 SC,SYC,Africa,Eastern Africa
 SL,SLE,Africa,Western Africa
 SG,SGP,Asia,South-eastern Asia
-SX,SXM,Americas,Caribbean
+SX,SXM,North America,Caribbean
 SK,SVK,Europe,Eastern Europe
 SI,SVN,Europe,Southern Europe
 SB,SLB,Oceania,Melanesia
 SO,SOM,Africa,Eastern Africa
 ZA,ZAF,Africa,Southern Africa
-GS,SGS,Americas,South America
+GS,SGS,South America,South America
 SS,SSD,Africa,Eastern Africa
 ES,ESP,Europe,Southern Europe
 LK,LKA,Asia,Southern Asia
 SD,SDN,Africa,Northern Africa
-SR,SUR,Americas,South America
+SR,SUR,South America,South America
 SJ,SJM,Europe,Northern Europe
 SE,SWE,Europe,Northern Europe
 CH,CHE,Europe,Western Europe
@@ -224,29 +223,28 @@ TL,TLS,Asia,South-eastern Asia
 TG,TGO,Africa,Western Africa
 TK,TKL,Oceania,Polynesia
 TO,TON,Oceania,Polynesia
-TT,TTO,Americas,Caribbean
+TT,TTO,North America,Caribbean
 TN,TUN,Africa,Northern Africa
 TR,TUR,Asia,Western Asia
 TM,TKM,Asia,Central Asia
-TC,TCA,Americas,Caribbean
+TC,TCA,North America,Caribbean
 TV,TUV,Oceania,Polynesia
 UG,UGA,Africa,Eastern Africa
 UA,UKR,Europe,Eastern Europe
 AE,ARE,Asia,Western Asia
 GB,GBR,Europe,Northern Europe
-US,USA,Americas,Northern America
-UM,UMI,Oceania,Micronesia
-UY,URY,Americas,South America
+US,USA,North America,Northern America
+UM,UMI,Antartica,Antartica
+UY,URY,South America,South America
 UZ,UZB,Asia,Central Asia
 VU,VUT,Oceania,Melanesia
-VE,VEN,Americas,South America
+VE,VEN,South America,South America
 VN,VNM,Asia,South-eastern Asia
-VG,VGB,Americas,Caribbean
-VI,VIR,Americas,Caribbean
+VG,VGB,North America,Caribbean
+VI,VIR,North America,Caribbean
 WF,WLF,Oceania,Polynesia
 EH,ESH,Africa,Northern Africa
 YE,YEM,Asia,Western Asia
 ZM,ZMB,Africa,Eastern Africa
 ZW,ZWE,Africa,Eastern Africa
 XK,XKK,Europe,Southern Europe
-TA,TAA,Africa,Eastern Africa

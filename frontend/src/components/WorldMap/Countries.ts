@@ -1,56 +1,37 @@
-import countriesJson from './countries.json'
-
-// Enum for continents
-export enum Continents {
-    Africa = "Africa",
-    Asia = "Asia",
-    Europe = "Europe",
-    Oceania = "Oceania",
-    Americas = "Americas"
+// Data types for the countries, regions and continents
+enum DrivingSide {
+    L = "Left",
+    R = "Right"
 };
 
-// Enum for regions
-export enum Regions {
-    NorthernAfrica = "Northern Africa",
-    SubSaharanAfrica = "Sub-Saharan Africa",
-    WesternAsia = "Western Asia",
-    CentralAsia = "Central Asia",
-    EasternAsia = "Eastern Asia",
-    SouthernAsia = "Southern Asia",
-    SouthEasternAsia = "South-Eastern Asia",
-    WesternEurope = "Western Europe",
-    EasternEurope = "Eastern Europe",
-    NorthernEurope = "Northern Europe",
-    SouthernEurope = "Southern Europe",
-    AustraliaAndNewZealand = "Australia and New Zealand",
-    Melanesia = "Melanesia",
-    Micronesia = "Micronesia",
-    Polynesia = "Polynesia",
-    NorthernAmerica = "Northern America",
-    LatinAmericaandtheCaribbean = "Latin America and the Caribbean"
-};
-
-export enum Drives {
-    Right = 1,
-    Left = 2
-};
-
-
-// Country interface
-export interface Country {
-    title: string;
-    d: string;
-    drives: Drives;
-    coverage: number;
+export interface CountryData {
     id: string;
-    continent: Continent;
-    region: Region
+    iso_alpha3: string;
+    flag_emoji: string;
+    type: "country";
+    name: string;
+    coverage: number;
+    driving_side: DrivingSide;
+    path: string;
     bbox: string;
 };
 
-export const countries: Country[] = countriesJson.map(country => ({
-    ...country,
-    drives: country.drives_left ? Drives.Left : Drives.Right,
-    continent: Continent[country.continent as keyof typeof Continent],
-    region: Region[country.region as keyof typeof Region]
-}));
+export interface RegionData {
+    id: string;
+    name: string;
+    bbox: string;
+    type: "region";
+    countries: CountryData[];
+};
+
+export interface ContinentData {
+    id: string;
+    name: string;
+    bbox: string;
+    type: "continent";
+    regions: RegionData[];
+};
+
+// Load countries data from countries_final.json
+import worldDataJson from './countries_final.json';
+export const worldData = worldDataJson as ContinentData[];

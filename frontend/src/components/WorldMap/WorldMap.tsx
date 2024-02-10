@@ -1,99 +1,50 @@
-import { createSignal, type Component } from 'solid-js';7
+import { createSignal, type Component, useContext } from 'solid-js';7
 import styles from './WorldMap.module.css';
-import { Country, countries, Continent, Region, Drives } from './Countries';
-import { tweenToNewViewBox } from '../../utils/tweenToNewViewBox';
 import { IconList, IconMap } from '@tabler/icons-solidjs';
-
-// Filters Interface
-interface Filters {
-  min_coverage: number;
-  drives?: Drives;
-  continent?: Continent;
-  region?: Region;
-}
+import Continent from './Continent';
+import { ContinentData, worldData } from './Countries';
+import { SelectedContext } from '../../App';
 
 // Toggle enum
 enum Toggle {
-  Map = 'map',
-  List = 'list',
+  Map,
+  List
 }
 
+// World map component
 const WorldMap: Component = () => {
 
-  // State to keep track of the hovered country
-  const [hoveredCountry, setHoveredCountry] = createSignal<string | null>(null);
+  // State for the map mode
+  const [mapMode, setMapMode] = createSignal(Toggle.Map);
 
-  // Current map mode
-  const [mapMode, setMapMode] = createSignal<Toggle>(Toggle.Map);
+  // Get selected context
+  const [selected, setSelected] = useContext(SelectedContext);
 
-  var previous_fill = '';
-
-  // State to store the current viewbox
-  const [viewBox, setViewBox] = createSignal<string>('0 0 1009.6727 665.96301');
-
-  // State to keep track of the filters
-  const [filters, setFilters] = createSignal<Filters>({
-    min_coverage: 0,
-    continent: Continent.Africa,
-    region: Region.NorthernAfrica
-  });
-
-  // Event handlers
-  const handleMouseEnter = (e: MouseEvent) => {
-    const target = e.target as SVGElement;
-    const country = target.getAttribute('data-name');
-    previous_fill = target.style.fill;
-    target.style.fill = 'rgba(50, 50, 50, 1)';
-    setHoveredCountry(country);
-  };
-
-  const handleMouseLeave = (e: MouseEvent) => {
-    const target = e.target as SVGElement;
-    target.style.fill = previous_fill;
-    previous_fill = '';
-    setHoveredCountry(null);
-  };
-
-  // Handle toggle
+  // Handle the toggle button
   const handleToggle = () => {
-    if (mapMode() === Toggle.Map) {
-      setMapMode(Toggle.List);
-    } else {
-      setMapMode(Toggle.Map);
-    }
-  }
-
-  // Handle mouse click on a country
-  const handleMouseClick = (e: MouseEvent) => {
-    const target = e.target as SVGElement;
-    const targetViewBox = target.getAttribute('data-bbox');
-    if (targetViewBox) {
-      const currentViewBox = viewBox();
-      tweenToNewViewBox(setViewBox, currentViewBox, targetViewBox);
-    }
-  }
-
-  // Function to determine if a country should be displayed
-  const shouldDisplayCountry = (country: Country) => {
-
-    if (country.coverage < filters().min_coverage) {
-      return false;
-    }
-
-    if (filters().drives && country.drives !== filters().drives) {
-      return false;
-    }
-
-    if (filters().continent && country.continent !== filters().continent) {
-      return false;
-    }
-
-    if (filters().region && country.region !== filters().region) {
-      return false;
-    }
-
-    return true;
+    setMapMode(mapMode() === Toggle.Map ? Toggle.List : Toggle.Map);
   };
+
+  // // Handle click
+  // const handleClick = (event: MouseEvent) => {
+
+  //   // Grab all parent elements
+  //   const country = event.target as HTMLElement;
+  //   const region = country.parentElement as HTMLElement;
+  //   const continent = region.parentElement as HTMLElement;
+
+  //   // Get the bbox
+  //   const bbox = continent.getAttribute('data-bbox');
+  //   if (bbox) {
+  //     setSelected({
+  //       world: selected().world,
+  //       continent: {bbox: bbox, id: continent.id}
+  //     });
+  //   }
+    
+  //   // Give the continent selected class
+  //   continent.classList.add(styles.Selected);
+  // };
 
   // Render the component
   return (
@@ -111,26 +62,17 @@ const WorldMap: Component = () => {
         stroke="black" 
         stroke-linecap="round" 
         stroke-linejoin="round" 
-        stroke-width=".2" 
-        version="1.2" 
-        viewBox={viewBox()} 
+        stroke-width=".2"
+        viewBox={selected().bbox}
         width="1009.6727" 
         xmlns="http://www.w3.org/2000/svg"
       >
-        {countries.map((country) => (
-          <path 
-          data-title={country.title}
-          data-bbox={country.bbox}
-          id={country.id}
-          d={country.d} 
-          onMouseEnter={handleMouseEnter} 
-          onMouseLeave={handleMouseLeave}
-          onClick={handleMouseClick}
-          style={{fill: shouldDisplayCountry(country) ? 'inherit' : 'rgba(0, 0, 0, 0.4)'}}
-          >
-          </path>
-        ))}
-        {/* <rect id="nordic" x="1000" y="50" width="200" height="100" fill="rgba(255,255,255,0)"/> */}
+        {
+          /* Render each continent */
+          worldData.map((continent : ContinentData, index) => (
+            <Continent parent={'world'} continent={continent} />
+          ))
+        }
       </svg>
     </div>
     </>
